@@ -1,0 +1,37 @@
+[project]
+name = "langchain-filesystem-context"
+version = "0.1.0"
+description = "A system for using file system as context with LangChain agents"
+requires-python = ">=3.12"
+dependencies = [
+    # LangChain core packages
+    "langchain",
+    "langchain-openai",
+    "langchain-community",
+
+    # Vector and data storage
+    "chromadb",
+    "faiss-cpu",
+
+    # Document processing
+    "pypdf",
+    "unstructured",
+    "pillow",
+
+    # API and model interaction
+    "openai",
+
+    # Utility and data handling
+    "python-dotenv",
+    "tiktoken",
+    "pydantic",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# === FIX IS HERE ===
+# Add this section to explicitly tell hatchling where your packages are located.
+[tool.hatch.build.targets.wheel]
+packages = ["src/agents", "src/tools", "src/utils"]
