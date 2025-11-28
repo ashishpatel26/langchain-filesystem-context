@@ -8,7 +8,7 @@ Tired of AI agents with limited memory? This project demonstrates how to superch
 
 This project is a practical implementation of the concepts from the [LangChain blog post: &#34;How Agents Can Use Filesystems for Context Engineering&#34;](https://blog.langchain.com/how-agents-can-use-filesystems-for-context-engineering/).
 
-## 🧠 How It Works
+## 🧠 How It Worksex
 
 The system uses a Retrieval-Augmented Generation (RAG) approach. Instead of relying solely on its pre-trained knowledge, the agent first retrieves relevant information from your files and then uses that information to generate a precise answer.
 
